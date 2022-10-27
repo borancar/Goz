@@ -262,7 +262,7 @@ SUB help
  PRINT "SHIFT + F5: ponovno pokretanje programa (Ako izbaci)"
  ass = INPUT$(1)
  SCREEN 13
- ime = "goz.bmp"
+ ime = "Goz.bmp"
  pal
 END SUB
 
@@ -379,7 +379,7 @@ horiz = 260: vert = 200: CLOSE
 bmp
 pal
 ass = INPUT$(1)
-ime = "goz.bmp"
+ime = "Goz.bmp"
 pal
 
 LINE (0, 0)-(259, 199), 0, BF
@@ -461,14 +461,14 @@ trkz(0) = 2.65: trkz(1) = 2.34
 trqz(0) = 50: trqz(1) = 75
 
 'UŸitavanje vrsta bongova i loptice
-ime = "bong.bmp": horiz = 75: vert = 35: xhoriz = 76
+ime = "BONG.BMP": horiz = 75: vert = 35: xhoriz = 76
 bmp
 GET (51, 1)-(56, 6), loptica
 GET (0, 0)-(49, 7), bong(0, 0)
 GET (0, 9)-(49, 16), bong(0, 1)
 GET (0, 18)-(74, 25), bong(0, 2)
 GET (0, 27)-(49, 34), bong(0, 3)
-ime = "goz.bmp"
+ime = "Goz.bmp"
 pal
 
 'UŸitavanje vrsta debila
@@ -485,7 +485,7 @@ LINE (42, 0)-(42, 7), svpl
 GET (0, 0)-(42, 7), pucanje
 
 'UŸitavanje vrsta kockica i znakova, i njamkalice.
-ime = "goz.bmp": horiz = 84: vert = 64: xhoriz = 84
+ime = "Goz.bmp": horiz = 84: vert = 64: xhoriz = 84
 bmp
 FOR tgt = 0 TO 4
 FOR tgtt = 0 TO 4
@@ -497,11 +497,11 @@ bmp
 FOR zn = 0 TO 10
 GET (zn * 9, 0)-(zn * 9 + 7, 7), znx(0, zn + 1)
 NEXT zn
-ime = "uvod.bmp": horiz = 320: vert = 200: xhoriz = 320
+ime = "Uvod.bmp": horiz = 320: vert = 200: xhoriz = 320
 bmp
 ass = INPUT$(1)
 IF ass = "h" THEN help
-OPEN "goz.dat" FOR BINARY ACCESS READ AS #1
+OPEN "Goz.dat" FOR BINARY ACCESS READ AS #1
 GET #1, 1, GozSpeedx: GozSpeed = GozSpeedx
 z = .5: bz = 5
 END SUB
